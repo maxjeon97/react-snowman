@@ -14,8 +14,7 @@ describe('Snowman component tests', function () {
     });
 
     test('only allows 6 wrong guesses', function () {
-        const { container, debug } = render(<Snowman />);
-        debug(container);
+        const { container } = render(<Snowman words={['test']}/>);
 
         const wrongLetterClasses = [".z", ".y", ".x", ".w", ".v", ".u"];
         wrongLetterClasses.forEach((letter) => {
@@ -23,6 +22,6 @@ describe('Snowman component tests', function () {
         });
 
         expect(container.querySelector('.Snowman-buttonArea')).not.toBeInTheDocument();
-        expect(container.querySelector('.Snowman-gameOverMsg')).toContainHTML('You lose. Correct word was');
+        expect(container.querySelector('.Snowman-gameOverMsg')).toContainHTML('You lose. Correct word was test');
     });
 });

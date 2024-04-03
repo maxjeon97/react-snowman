@@ -93,9 +93,13 @@ function Snowman({
       {nWrong >= maxWrong
         ? <p className="Snowman-gameOverMsg">You lose. Correct word was {answer}.</p>
         : isWinner
-          ? <p className="Snowman-victoryMsg">You win!</p>
+          ? <p className="Snowman-victoryMsg">Congrats! You win!</p>
           : <p className="Snowman-buttonArea">{generateButtons()}</p>}
-      <button className="Snowman-restart btn btn-secondary" onClick={restart}>Restart</button>
+      <button
+        className="Snowman-restart btn btn-secondary"
+        onClick={restart}>
+        Restart
+      </button>
     </div>
   );
 }
