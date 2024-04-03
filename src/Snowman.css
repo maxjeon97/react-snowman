@@ -4,6 +4,10 @@
   margin: 0 auto;
 }
 
+.Snowman-visibility {
+  visibility: hidden;
+}
+
 .Snowman-word {
   letter-spacing: 1em;
 }
